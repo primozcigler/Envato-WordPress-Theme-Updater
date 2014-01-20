@@ -24,19 +24,23 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 		 */
 		public function __construct( $username, $apiKey, $authors ) {
 			// to debug
-			set_site_transient('update_themes',null);
+			set_site_transient( 'update_themes', null );
 
 			$this->username = $username;
 			$this->apiKey   = $apiKey;
 			$this->authors  = $authors;
 
 			add_filter( "pre_set_site_transient_update_themes", array( &$this, "check" ) );
+			// $updated = new stdClass();
+			// $updated->checked = true;
+			// $this->check($updated);
 		}
 
 		/**
 		 * Check for the updates
 		 */
 		public function check( $updates ) {
+			echo '<pre>'; echo var_dump( 'starting check' ); echo '</pre>';
 
 			$this->username = apply_filters( "pixelentity_theme_update_username", $this->username );
 			$this->apiKey   = apply_filters( "pixelentity_theme_update_apiKey", $this->apiKey );
@@ -55,7 +59,7 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 
 
 			$api = new Envato_Protected_API( $this->username,$this->apiKey );
-			add_filter( "http_request_args", array(&$this,"http_timeout"), 10, 1 );
+			add_filter( "http_request_args", array( &$this, "http_timeout" ), 10, 1 );
 			$purchased = $api->wp_list_themes( true );
 
 			$installed = function_exists( "wp_get_themes" ) ? wp_get_themes() : get_themes();
