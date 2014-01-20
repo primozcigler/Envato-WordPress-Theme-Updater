@@ -24,7 +24,7 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 		 */
 		public function __construct( $username, $apiKey, $authors ) {
 			// to debug
-			// set_site_transient('update_themes',null);
+			set_site_transient('update_themes',null);
 
 			$this->username = $username;
 			$this->apiKey   = $apiKey;
@@ -36,7 +36,7 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 		/**
 		 * Check for the updates
 		 */
-		public function check($updates) {
+		public function check( $updates ) {
 
 			$this->username = apply_filters( "pixelentity_theme_update_username", $this->username );
 			$this->apiKey   = apply_filters( "pixelentity_theme_update_apiKey", $this->apiKey );
@@ -54,7 +54,7 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 			}
 
 
-			$api =& new Envato_Protected_API( $this->username,$this->apiKey );
+			$api = new Envato_Protected_API( $this->username,$this->apiKey );
 			add_filter( "http_request_args", array(&$this,"http_timeout"), 10, 1 );
 			$purchased = $api->wp_list_themes( true );
 
