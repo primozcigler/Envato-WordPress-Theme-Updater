@@ -20,6 +20,10 @@ The first 2 parameters should be set by the buyer somehow, like in your theme op
 `$author` variable can be a single name, like "Pixelentity" or an array of strings. If not set,
 all themes purchased by the user on ThemeForest (even if by different authors) can be updated.
 
-Enjoy!
+### Authors
 
-Pixelentity Team & ProteusThemes.
+* [Envato](https://github.com/envato/envato-wordpress-toolkit-library)
+* [Pixelentity Team](http://pixelentity.com/)
+* [ProteusThemes](http://www.proteusthemes.com/)
+
+Feel free to contribute and improve this repo, fork it and then submit the pull request!
