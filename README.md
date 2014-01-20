@@ -5,10 +5,12 @@ WordPress library to enable automatic updates in the theme based on [Envato Word
 
 ### Installation & Use
 
-Download this archive to your theme, then add
+Download this repo to your theme, then add
 
-	load_template( trailingslashit( get_template_directory() ) . 'wp-theme-upgrader/envato-wp-theme-updater.php' );
-	Envato_WP_Theme_Updater::init( $username, $apikey, $author );
+```php
+load_template( trailingslashit( get_template_directory() ) . 'wp-theme-upgrader/envato-wp-theme-updater.php' );
+Envato_WP_Theme_Updater::init( $username, $apikey, $author );
+```
 
 to your `functions.php` where
 
