@@ -57,7 +57,7 @@ if ( ! class_exists( "Envato_WP_Theme_Updater" ) ) {
 			add_filter( "http_request_args", array( &$this, "http_timeout" ), 10, 1 );
 			$purchased = $api->wp_list_themes( true );
 
-			$installed = function_exists( "wp_get_themes" ) ? wp_get_themes() : get_themes();
+			$installed = wp_get_themes();
 			$filtered = array();
 
 			foreach ( $installed as $theme ) {
