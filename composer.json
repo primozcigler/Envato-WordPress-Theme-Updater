@@ -2,7 +2,6 @@
     "name": "primozcigler/envato-wordpress-theme-updater",
     "description": "Class to add the auto-updating support to the premium WordPress themes available on the ThemeForest.",
     "license": "MIT",
-    "version": "1.1.0",
     "authors": [
         {
             "name": "Primoz Cigler",
