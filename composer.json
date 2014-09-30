@@ -1,0 +1,11 @@
+{
+    "name": "primoz/envato-wordpress-theme-updater",
+    "description": "Class to add the auto-updating support to the premium WordPress themes available on the ThemeForest.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Primoz Cigler",
+            "email": "primoz@proteusnet.com"
+        }
+    ]
+}
