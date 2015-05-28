@@ -9,6 +9,6 @@
         }
     ],
     "autoload": {
-        "files": ["envato-wp-theme-updater.php"]
+        "classmap": ["./"]
     }
 }
